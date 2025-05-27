@@ -1,6 +1,41 @@
 defmodule NodeActivator do
   @moduledoc """
-  Documentation for `NodeActivator`.
+  This module provides functionality to turn a non-distributed Erlang node into a distributed node.
+  It handles the entire process of node activation, including:
+
+  * Ensuring the EPMD (Erlang Port Mapper Daemon) is running
+  * Generating unique node names
+  * Starting the distributed node
+  * Providing proper error handling and logging
+
+  ## Features
+
+  * Automatic EPMD activation
+  * Unique node name generation with customizable prefixes
+  * Idempotent operation (safe to call multiple times)
+  * Comprehensive error handling
+  * Detailed logging of node operations
+
+  ## Usage
+
+  The main function `run/1` takes a prefix string and returns either:
+  * `{:ok, node()}` - The node was successfully started or was already running
+  * `{:error, reason}` - An error occurred during node activation
+
+  ## Dependencies
+
+  * `epmd_up` - For EPMD management
+  * `get_host` - For hostname resolution
+
+  ## Examples
+
+      # Start a new distributed node with prefix "myapp"
+      {:ok, node_name} = NodeActivator.run("myapp")
+      # => {:ok, :"myapp_abc123@hostname"}
+
+      # Safe to call multiple times
+      {:ok, same_node} = NodeActivator.run("myapp")
+      # => {:ok, :"myapp_abc123@hostname"}
   """
 
   require Logger
