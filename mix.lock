@@ -1,3 +1,4 @@
 %{
   "epmd_up": {:hex, :epmd_up, "1.0.0", "7f186b5e1b5d9473a2c928412104edf469d8b270bdb5242025a2e7056a9a3780", [:mix], [], "hexpm", "afc181447799b527afeef88be3d76d4097b8957e1a5bf5713c950ec400437f21"},
+  "get_host": {:hex, :get_host, "1.0.0", "1cd1e216cc024e88fcab599394d88346fcfc60b241c567524662ea9c18059264", [:mix], [], "hexpm", "0a6c515c3acaff38fbbe4b9a59d513a7d084efe4ffca19c2ad3eb767cc482e67"},
 }
