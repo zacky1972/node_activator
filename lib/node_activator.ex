@@ -78,11 +78,12 @@ defmodule NodeActivator do
             {:ok, Node.self()}
 
           {:error, reason} ->
-            Logger.error("Node #{name} cannot be launched by #{inspect reason}.")
+            Logger.error("Node #{name} cannot be launched by #{inspect(reason)}.")
             {:error, reason}
         end
 
-      {:error, reason} -> {:error, reason}
+      {:error, reason} ->
+        {:error, reason}
     end
   end
 end
