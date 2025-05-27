@@ -1,0 +1,3 @@
+%{
+  "epmd_up": {:hex, :epmd_up, "1.0.0", "7f186b5e1b5d9473a2c928412104edf469d8b270bdb5242025a2e7056a9a3780", [:mix], [], "hexpm", "afc181447799b527afeef88be3d76d4097b8957e1a5bf5713c950ec400437f21"},
+}
