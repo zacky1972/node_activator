@@ -6,7 +6,7 @@ defmodule NodeActivator.MixProject do
   def project do
     [
       app: :node_activator,
-      version: "0.3.0",
+      version: "1.0.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -14,7 +14,11 @@ defmodule NodeActivator.MixProject do
       # Docs
       name: "NodeActivator",
       source_url: @source_url,
-      docs: &docs/0
+      docs: &docs/0,
+
+      # Hex
+      description: description(),
+      package: package()
     ]
   end
 
@@ -41,6 +45,17 @@ defmodule NodeActivator.MixProject do
     [
       main: "NodeActivator",
       extras: ["README.md"]
+    ]
+  end
+
+  defp description do
+    "A module to activate VM nodes."
+  end
+
+  defp package do
+    [
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => @source_url}
     ]
   end
 end
