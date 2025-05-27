@@ -32,7 +32,7 @@ defmodule NodeActivator do
 
   defp start_distributed_node(node_name_prefix) do
     EpmdUp.activate()
-    
+
     case NodeActivator.Util.generate_node_name(node_name_prefix) do
       {:ok, name} ->
         Logger.info("starting node #{name}")
@@ -46,7 +46,7 @@ defmodule NodeActivator do
             Logger.error("Node #{name} cannot be launched by #{inspect reason}.")
             {:error, reason}
         end
-      
+
       {:error, reason} -> {:error, reason}
     end
   end
