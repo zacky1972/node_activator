@@ -1,13 +1,20 @@
 defmodule NodeActivator.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/zacky1972/node_activator"
+
   def project do
     [
       app: :node_activator,
       version: "0.3.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      name: "NodeActivator",
+      source_url: @source_url,
+      docs: &docs/0
     ]
   end
 
@@ -25,7 +32,15 @@ defmodule NodeActivator.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:epmd_up, "~> 1.0"},
       {:get_host, "~> 1.0"},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false, warn_if_outdated: true}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "NodeActivator",
+      extras: ["README.md"]
     ]
   end
 end
