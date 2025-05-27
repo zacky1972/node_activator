@@ -4,8 +4,8 @@ defmodule NodeActivator.MixProject do
   def project do
     [
       app: :node_activator,
-      version: "0.1.0",
-      elixir: "~> 1.18",
+      version: "0.3.0",
+      elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
