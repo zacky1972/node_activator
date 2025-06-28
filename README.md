@@ -46,7 +46,7 @@ The package can be installed by adding `node_activator` to your list of dependen
 ```elixir
 def deps do
   [
-    {:node_activator, "~> 1.0"}
+    {:node_activator, "~> 1.1"}
   ]
 end
 ```
