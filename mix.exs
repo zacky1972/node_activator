@@ -6,7 +6,7 @@ defmodule NodeActivator.MixProject do
   def project do
     [
       app: :node_activator,
-      version: "1.1.1",
+      version: "1.1.2",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -34,7 +34,7 @@ defmodule NodeActivator.MixProject do
   def docs do
     [
       main: "readme",
-      extras: ["README.md", "LICENSE.md"]
+      extras: ["README.md", "LICENSE.md", "CHANGELOG.md"]
     ]
   end
 
